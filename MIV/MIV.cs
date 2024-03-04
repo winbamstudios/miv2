@@ -19,11 +19,11 @@ namespace MIV
             Console.WriteLine("~");
             Console.WriteLine("~");
             Console.WriteLine("~");
-            Console.WriteLine("~                               MIV - MInimalistic Vi");
+            Console.WriteLine("~                             MIV^2 - MInimalistic Vi");
             Console.WriteLine("~");
-            Console.WriteLine("~                                  version 1.2");
-            Console.WriteLine("~                             by Denis Bartashevich");
-            Console.WriteLine("~                            Minor additions by CaveSponge");
+            Console.WriteLine("~                                 version 1.3b1");
+            Console.WriteLine("~                           OG by Denis Bartashevich");
+            Console.WriteLine("~                            Update by WinBamStudios");
             Console.WriteLine("~                    MIV is open source and freely distributable");
             Console.WriteLine("~");
             Console.WriteLine("~                     type :help<Enter>          for information");
@@ -156,13 +156,27 @@ namespace MIV
                             }
                             else if (infoBar == ":q")
                             {
-                                return null;
-
+                                infoBar = "Quit? (y/n)";
+                                quitKeyInfo = Console.ReadKey(true);
+                                if (quitKeyInfo.KeyChar == 'y')
+                                {
+                                    return null
+                                }
+                                else
+                                {
+                                    infoBar = "";
+                                    printMIVScreen(chars, pos, infoBar, editMode);
+                                    break;
+                                }
                             }
                             else if (infoBar == ":help")
                             {
                                 printMIVStartScreen();
                                 break;
+                            }
+                            else if (infoBar == ":q!")
+                            {
+                                return null;
                             }
                             else
                             {
