@@ -10,4 +10,5 @@ Possible action inside editor:
  - i (Enter INSERT mode)
  - ESC button (Exit INSERT mode)
  - :wq (Save and Exit), returns String of text
- - :q (Quit without saving), returns null
+ - :q! (Quit without saving), returns null
+ - :q (Asks if you want to quit w/out saving), then returns null
