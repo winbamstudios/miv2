@@ -1,4 +1,4 @@
-# MIV - CosmosOS Text Editor
+# MIV² (MIV^2) - CosmosOS Text Editor Update Project
 
  - MIV functions are similar to VIM.
 
@@ -11,7 +11,3 @@ Possible action inside editor:
  - ESC button (Exit INSERT mode)
  - :wq (Save and Exit), returns String of text
  - :q (Quit without saving), returns null
- 
-How to test MIV Text Editor: https://github.com/bartashevich/MIV/wiki/How-can-I-test-MIV-Text-Editor%3F
-
-Video: https://www.youtube.com/watch?v=1acKL41pZXo
