@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -156,11 +156,12 @@ namespace MIV
                             }
                             else if (infoBar == ":q")
                             {
+                                ConsoleKeyInfo quitKeyInfo = Console.ReadKey(true);
                                 infoBar = "Quit? (y/n)";
                                 quitKeyInfo = Console.ReadKey(true);
                                 if (quitKeyInfo.KeyChar == 'y')
                                 {
-                                    return null
+                                    return null;
                                 }
                                 else
                                 {
@@ -308,7 +309,7 @@ namespace MIV
             }
 
             String text = String.Empty;
-            Console.WriteLine("Do you want to open " + Kernel.file+ " content? (Yes/No)");
+            Console.WriteLine("Do you want to open " + Kernel.file + " content? (Yes/No)");
             if (Console.ReadLine().ToLower() == "yes" || Console.ReadLine().ToLower() == "y")
             {
                 text = miv(File.ReadAllText(@"0:\" + Kernel.file));
